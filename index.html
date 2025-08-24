@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AirStokCLY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --font: 'Inter', sans-serif;
+      --color-bg: #ffffff;
+      --color-text: #1a1a1a;
+      --color-primary: #111;
+      --color-accent: #007bff;
+      --color-border: #e0e0e0;
+      --color-price: #2e7d32;
+    }
+	.boton-comprar {
+	  display: inline-block;
+	  background-color: var(--color-accent);
+	  color: white;
+	  border: none;
+	  padding: 10px 20px;
+	  font-size: 1rem;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  transition: background 0.3s ease;
+	}
+
+.boton-comprar:hover {
+  background-color: #0056b3;
+}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background: var(--color-primary);
+      color: white;
+      padding: 20px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      font-weight: 600;
+      color: white;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f8f8f8;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    /* Productos */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .producto {
+      background-color: white;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      width: 320px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .galeria {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 90px;
+      height: auto;
+      border-radius: 5px;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+
+    .producto h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .producto p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .precio {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--color-price);
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: var(--color-accent);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--color-primary);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .productos {
+        flex-direction: column;
+        align-items: center;
+      }
+#info-airpods h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+
+#info-airpods p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+      header .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .galeria {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>AirStokCLY</h1>
+      <nav>
+        <a href="#airpods2">AirPods 2</a>
+        <a href="#airpods3">AirPods 3</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>AirPods de segunda y tercera generación</h2>
+      <p>Calidad Apple. Envío rápido. Garantía incluida.</p>
+    </div>
+  </section>
+
+  <section class="productos container">
+    <!-- Producto 1: AirPods 2 -->
+    <div class="producto" id="airpods2">
+      <div class="galeria">
+        <img src="https://scontent.fcyw4-1.fna.fbcdn.net/v/t1.15752-9/536288284_1330497358537814_1524783788035797578_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LjZaGX2i1vcQ7kNvwFsmjec&_nc_oc=AdmaidFNqU5OniHFIJJ0k_9MjbS5rISQCQBWb4Dqrm_u7wlJHxtygeA4xYReVx_MWu0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcyw4-1.fna&oh=03_Q7cD3AEVRXDgw27iyncMtsT3gKDp4qf_WA11BO2eL8IchQUmjw&oe=68D1FCE6"/>
+        <img src="https://scontent.fcyw4-1.fna.fbcdn.net/v/t1.15752-9/536383539_1060889616033433_2367441121398520076_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=E1ciop_ygcwQ7kNvwGK1cJm&_nc_oc=AdnDzlz0MVETs3Og6UGLnezRkFfl5xQ9viaTJygblNjiMscOUaMAc5NUc2j2Wfq1ups&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcyw4-1.fna&oh=03_Q7cD3AHqVBCpJzPoAnQkhBxn-n3xAScU4e8sHfg9fpuuUVKttQ&oe=68D1DD02"/>
+        <img src="https://scontent.fcyw4-1.fna.fbcdn.net/v/t1.15752-9/535104981_1159011839465761_200746750642769224_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=jawas6HdLZ0Q7kNvwE1CQJE&_nc_oc=AdlWw7UdlzVfoGxFNPhy9qQ2xYKKQLp4gsHvI6JZI2vYxrIx0f8vB1n6mant2JtYAAE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcyw4-1.fna&oh=03_Q7cD3AEF7BmMaaXHyFogf1TGgfy57ZhEynj7Xiu8CYPSRnOgjw&oe=68D1DA39"/>
+      </div>
+      <h3>AirPods 2ª Generación</h3>
+      <p>Diseño clásico y gran autonomía.</p>
+      <span class="precio">$900 MX</span>
+      <a href="airpods2.html"><button>Comprar</button></a>
+
+    </div>
+
+    <!-- Producto 2: AirPods 3 -->
+    <div class="producto" id="airpods3">
+      <div class="galeria">
+        <img src="https://i.ytimg.com/vi/SRUb66uLIFY/maxresdefault.jpg"/>
+        <img src="https://techstorecolombia.com/wp-content/uploads/2022/02/IMG_4117-scaled.jpg"/>
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1572990352299"/>
+      </div>
+      <h3>AirPods 3ª Generación</h3>
+      <p>Sonido envolvente y resistencia al agua.</p>
+      <span class="precio">$800 MX</span>
+      <a href="airpods3.html" class="boton-comprar">Comprar</a>
+    </div>
+  </section>
+<section id="info-airpods" class="container">
+  <h2 style="text-align:center; margin-bottom: 30px;">Más información sobre los AirPods</h2>
+
+  <div id="info-airpods2" style="margin-bottom: 50px;">
+    <h3>AirPods 2ª Generación</h3>
+    <p>
+      Los AirPods de segunda generación cuentan con el chip H1 de Apple, lo que permite una conexión inalámbrica más rápida y estable. Ofrecen hasta 5 horas de autonomía con una sola carga y más de 24 horas con el estuche. Son ideales para quienes buscan simplicidad, calidad de sonido confiable y compatibilidad total con dispositivos Apple.
+    </p>
+  </div>
+
+  <div id="info-airpods3">
+    <h3>AirPods 3ª Generación</h3>
+    <p>
+      Los AirPods de tercera generación integran audio espacial con seguimiento dinámico de la cabeza para una experiencia envolvente. También ofrecen ecualización adaptativa y son resistentes al sudor y al agua (certificación IPX4). La duración de la batería es de hasta 6 horas con una sola carga, y más de 30 horas usando el estuche de carga.
+    </p>
+  </div>
+</section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AirStokCLY. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
